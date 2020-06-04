@@ -9,7 +9,7 @@
         <ion-row>
             <ion-col size-md="6" offset-md="3">
                 <ion-card *ngFor="let recipe of recipes">
-                    <ion-card-header>
+                    <ion-card-header (click)=getRecipe(recipe.id)>
                         {{ recipe.description }}
                     </ion-card-header>
                 </ion-card>
