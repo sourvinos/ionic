@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RecipesPageRoutingModule } from './recipes-routing.module';
-import { RecipesPage } from './recipes.page';
+import { RecipesPageComponent } from './recipes.page';
 
 @NgModule({
     imports: [
@@ -12,7 +12,7 @@ import { RecipesPage } from './recipes.page';
         IonicModule,
         RecipesPageRoutingModule
     ],
-    declarations: [RecipesPage]
+    declarations: [RecipesPageComponent]
 })
 
 export class RecipesPageModule { }
