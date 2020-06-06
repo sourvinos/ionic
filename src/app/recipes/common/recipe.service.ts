@@ -6,10 +6,10 @@ import { Recipe } from './recipe.model';
 export class RecipeService {
 
     private recipes: Recipe[] = [
-        { id: '1', description: 'Steak', imageUrl: 'steak.jpg' },
-        { id: '2', description: 'Pasta', imageUrl: 'pasta.jpg' },
-        { id: '3', description: 'Pizza', imageUrl: 'pizza.jpg' },
-        { id: '4', description: 'Salad', imageUrl: 'salad.jpg' }
+        { id: '1', description: 'Steak', about: 'Steak grilled on BBQ', imageUrl: 'steak.jpg' },
+        { id: '2', description: 'Pasta', about: 'Home made pasta', imageUrl: 'pasta.jpg' },
+        { id: '3', description: 'Pizza', about: 'Italians do it better', imageUrl: 'pizza.jpg' },
+        { id: '4', description: 'Salad', about: 'Fresh vegetables and feta cheese', imageUrl: 'salad.jpg' }
     ]
 
     constructor() { }

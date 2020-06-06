@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>recipes</ion-title>
+        <ion-title>My awesome recipes</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -9,9 +9,7 @@
         <ion-row>
             <ion-col size-md="6" offset-md="3">
                 <ion-card *ngFor="let recipe of recipes">
-                    <ion-card-header [routerLink]="['./', recipe.id]">
-                        {{ recipe.description }}
-                    </ion-card-header>
+                    <app-list-item [recipe]=recipe></app-list-item>
                 </ion-card>
             </ion-col>
         </ion-row>
