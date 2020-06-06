@@ -5,15 +5,14 @@ import { Recipe } from './recipe.model';
 
 export class RecipeService {
 
-    private recipes: Recipe[] = []
+    private recipes: Recipe[] = [
+        { id: '1', description: 'Steak', imageUrl: 'steak.jpg' },
+        { id: '2', description: 'Pasta', imageUrl: 'pasta.jpg' },
+        { id: '3', description: 'Pizza', imageUrl: 'pizza.jpg' },
+        { id: '4', description: 'Salad', imageUrl: 'salad.jpg' }
+    ]
 
-    constructor() {
-        const r1: Recipe = { id: '1', description: 'Schnitzel' }
-        const r2: Recipe = { id: '2', description: 'Spaghetti' }
-        const r3: Recipe = { id: '3', description: 'Pizza' }
-        const r4: Recipe = { id: '4', description: 'Tuna salad' }
-        this.recipes.push(r1, r2, r3, r4)
-    }
+    constructor() { }
 
     getAll() {
         return this.recipes
@@ -23,6 +22,13 @@ export class RecipeService {
         return this.recipes.find(recipe => {
             return recipe.id === recipeId
         })
+    }
+
+    deleteRecipe(recipeId: string): void {
+        this.recipes = this.recipes.filter(recipe => {
+            return recipe.id !== recipeId
+        })
+        console.log(this.recipes)
     }
 
 }
