@@ -13,10 +13,13 @@ export class RecipesPageComponent implements OnInit {
     recipes: Recipe[] = []
     url = '/recipes'
 
-    constructor(private router: Router, private recipeService: RecipeService) { }
+    constructor(private router: Router, private recipeService: RecipeService) {
+        console.log('Constructor')
+        this.recipes = this.recipeService.getAll()
+    }
 
     ngOnInit() {
-        this.recipes = this.recipeService.getAll()
+        console.log('Init')
     }
 
     public getRecipe(id: string) {
